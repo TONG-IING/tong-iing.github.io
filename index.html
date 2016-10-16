@@ -18,6 +18,15 @@
         text-align: center;
         font-size: 1rem;
       }
+
+      #ti-logo {
+        -moz-animation: spin 180s linear infinite;
+        -webkit-animation: spin 180s linear infinite;
+        animation: spin 180s linear infinite;
+      }
+      @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+      @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+      @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
     </style>
 </head>
 <body>
@@ -25,7 +34,7 @@
 <div id="content" class="container">
   <div class="row">
     <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
-      <img class="img-responsive" src="assets/images/logo.png">
+      <img id="ti-logo" class="img-responsive" src="assets/images/logo.png">
     </div>
   </div>
 
@@ -39,6 +48,8 @@
     </div>
   </div>
 </div>
+
+<iframe width="1" height="1" src="https://www.youtube.com/embed/YP6-_Htfsrc?autoplay=true" frameborder="0" allowfullscreen></iframe>
 
 <footer class="container">
   2016 &copy; TONG-IING.org, All Rights Reserved.
