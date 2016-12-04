@@ -6,24 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/cwtexfangsong.css">
     <style>
-      body {
-        font-family: 'cwTeXFangSong', serif;
+      html, body {
+        background: #333631;
       }
 
-      #content {
-        margin-top: 10vh;
-        text-align: center;
+      #ti-top {
+        padding: 10vh 0;
+        margin-bottom: 2rem;
+        background: #fff;
       }
 
-      html.night, html.night body {
-        background: #222;
-        color: #FFF;
+      #ti-top-text {
+        margin-top: 2rem;
       }
 
-      html.night #ti-logo svg g {
-        stroke: #CCC;
+      #ti-top-text-title small {
+        font-size: 1.7rem;
+      }
+
+      #ti-top-text-slogen {
+        font-size: 2.2rem;
       }
 
       footer {
@@ -32,76 +35,64 @@
         text-align: center;
         font-size: 1rem;
       }
-
-      #ti-logo {
-        -moz-animation: spin 180s linear infinite;
-        -webkit-animation: spin 180s linear infinite;
-        animation: spin 180s linear infinite;
-      }
-      @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-      @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-      @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
     </style>
 </head>
 <body>
 
-<div id="content" class="container">
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
-      <div id="ti-logo">
-        <svg class="img-responsive" width="550px" height="550px" viewBox="0 0 550 550" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-          <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
-          <title>家徽</title>
-          <desc>Created with Sketch.</desc>
-          <defs></defs>
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-            <g id="家徽" sketch:type="MSArtboardGroup" stroke="#434343">
-              <ellipse id="Oval-1" stroke-width="16" sketch:type="MSShapeGroup" cx="274.839517" cy="274.839517" rx="237.839517" ry="237.839517"></ellipse>
-              <polygon id="Polygon-1" stroke-width="32" sketch:type="MSShapeGroup" points="165.641907 197 270.283814 260.282755 165.641907 323.565511 61 260.282755 "></polygon>
-              <polygon id="Polygon-1" stroke-width="32" sketch:type="MSShapeGroup" transform="translate(384.848089, 302.524375) rotate(15.000000) translate(-384.848089, -302.524375) " points="384.848089 240.792047 485.98687 302.524375 384.848089 364.256702 283.709309 302.524375 "></polygon>
-              <path d="M189,481 L315.211776,181.435727" id="Line" stroke-width="32" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
-              <path d="M328,168.000001 L431.999997,115" id="Line" stroke-width="32" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
-            </g>
-          </g>
-        </svg>
-      </div>
-    </div>
-  </div>
+<section id="ti-top" class="row">
+  <div id="ti-top-logo" class="col-md-2 col-md-offset-4 col-xs-4 col-xs-offset-4">
+    <svg class="img-responsive" width="400px" height="400px" viewBox="0 0 550 550" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+      <title>家徽</title>
+      <desc></desc>
+      <defs></defs>
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g sketch:type="MSArtboardGroup" stroke="#434343">
+          <ellipse stroke-width="22" sketch:type="MSShapeGroup" cx="274.839517" cy="274.839517" rx="237.839517" ry="237.839517"></ellipse>
+          <polygon stroke-width="32" sketch:type="MSShapeGroup" points="165.641907 197 270.283814 260.282755 165.641907 323.565511 61 260.282755 "></polygon>
+          <polygon stroke-width="32" sketch:type="MSShapeGroup" transform="translate(384.848089, 302.524375) rotate(15.000000) translate(-384.848089, -302.524375) " points="384.848089 240.792047 485.98687 302.524375 384.848089 364.256702 283.709309 302.524375 "></polygon>
+          <path d="M189,481 L315.211776,181.435727" id="Line" stroke-width="32" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+          <path d="M328,168.000001 L431.999997,115" id="Line" stroke-width="32" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        </g>
+      </g>
+    </svg>
+  </div> <!-- /#ti-top-logo -->
 
+  <div id="ti-top-text" class="col-md-6 col-md-offset-0 col-xs-8 col-xs-offset-2">
+    <h1 id="ti-top-text-title">鶇鷹組 <small>La Donjinismo</small></h1>
+    <p id="ti-top-text-slogen"><span id="ti-top-text-slogen-typed"></span></p>
+  </div> <!-- /#ti-top-text -->
+</section>
+
+<section id="ti-content">
   <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <h1>鶇鷹組</h1>
+    <div id="ti-content-links" class="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2">
       <ul class="list-inline">
-        <li><a href="manifesto.html">鶇鷹組宣言</a></li>
-        <!-- li><a href="https://news.tong-iing.org/">鶇鷹報</a></li -->
-        <!-- li><a href="https://lab.tong-iing.org/">鶇鷹實驗室</a></li -->
-        <li><a href="message.html">留言板</a></li>
       </ul>
-    </div>
-  </div>
-</div>
-
-<iframe width="0" height="0" src="https://www.youtube.com/embed/YP6-_Htfsrc?autoplay=true" frameborder="0" allowfullscreen></iframe>
+    </div> <!-- /#ti-contents-links -->
+  </div> <!-- /.row -->
+</section>
 
 <footer class="container">
   2016 &copy; TONG-IING.org, All Rights Reserved.
 </footer>
 
-<script>
-//Day & Night
-(function() {
-  'use strict';
-  function checkTime() {
-    let now = new Date();
-    document.querySelector('html').classList.remove('night');
-    if (now.getHours() >= 17 || now.getHours() <= 4) {
-      document.querySelector('html').classList.add('night');
-    }
-  }
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
 
-  checkTime();
-  setInterval(checkTime, 30000);
-})();
+<script>
+  (function() {
+    "use strict";
+    $(function() {
+      $("#ti-top-text-slogen-typed").typed({
+        strings: ["我們相信 ^400 <b>群眾</b> ^600 的力量。",
+          "私たちは ^400 <b>群眾</b> ^600 の力を信じている。",
+          "Ni kredas la povon de ^400 <b>popoloj</b>."],
+        loop: true,
+        showCursor: true,
+        typeSpeed: 40,
+      });
+    });
+  })();
 </script>
 
 <script>
