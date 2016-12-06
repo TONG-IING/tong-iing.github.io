@@ -102,11 +102,15 @@
       var ts = Date.now();
       var rawBeat = ((ts + 3600000) % 86400000) / 1000 / 86.4;
 
-      var beatI = Math.round(rawBeat);
+      var beatI = Math.floor(rawBeat);
       var beat = beatI;
       if (beatI < 100) beat = "0" + beat;
       if (beatI < 10) beat = "0" + beat;
-      var cbeat = Math.round((rawBeat - beatI) * 100);
+      if (beatI == 0) beat = "0" + beat;
+      var cbeatI = Math.floor((rawBeat - beatI) * 100);
+      cbeat = cbeatI;
+      if (cbeatI < 10) cbeat = "0" + cbeat;
+      if (cbeatI == 0) cbeat = "0" + cbeat;
       
       return {
         beat: beat,
