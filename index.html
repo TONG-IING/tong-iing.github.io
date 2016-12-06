@@ -83,7 +83,7 @@
 <section id="ti-time">
   <div class="row">
     <div id="ti-time-clock" class="col-md-12 text-center">
-      <p id="ti-time-string" class="h4">鶇鷹標準時 @<span id="ti-time-var"></span></p>
+      <p id="ti-time-string" class="h4">鶇鷹標準時 <span id="ti-time-var"></span></p>
     </div>
   </div>
 </section>
@@ -100,8 +100,19 @@
     "use strict";
     function getBeat() {
       var ts = Date.now();
-      var beat = ((ts + 3600000) % 86400000) / 1000 / 86.4;
-      return beat;
+      var rawBeat = ((ts + 3600000) % 86400000) / 1000 / 86.4;
+
+      var beatI = Math.round(rawBeat);
+      var beat = beatI;
+      if (beatI < 100) beat = "0" + beat;
+      if (beatI < 10) beat = "0" + beat;
+      var cbeat = Math.round((rawBeat - beatI) * 100);
+      
+      return {
+        beat: beat,
+        cbeat: cbeat,
+        full: "@" + beat + "." + cbeat
+      };
     }
 
     $(function() {
@@ -115,7 +126,7 @@
       });
 
       setInterval(function () {
-        $("#ti-time-var").text(getBeat().toFixed(2));
+        $("#ti-time-var").text(getBeat().full);
       }, 864);
     });
   })();
