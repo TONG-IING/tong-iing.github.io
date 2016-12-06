@@ -9,6 +9,8 @@
     <style>
       html, body {
         background: #333631;
+        max-width: 100vw;
+        overflow-x: hidden;
       }
 
       #ti-top {
@@ -27,6 +29,12 @@
 
       #ti-top-text-slogen {
         font-size: 2.2rem;
+        height: 8rem;
+      }
+
+      #ti-time {
+        background: #222;
+        color: #eee;
       }
 
       footer {
@@ -72,6 +80,14 @@
   </div> <!-- /.row -->
 </section>
 
+<section id="ti-time">
+  <div class="row">
+    <div id="ti-time-clock" class="col-md-12 text-center">
+      <p id="ti-time-string" class="h4">鶇鷹標準時 @<span id="ti-time-var"></span></p>
+    </div>
+  </div>
+</section>
+
 <footer class="container">
   2016 &copy; TONG-IING.org, All Rights Reserved.
 </footer>
@@ -82,6 +98,12 @@
 <script>
   (function() {
     "use strict";
+    function getBeat() {
+      var ts = Date.now();
+      var beat = ((ts + 3600000) % 86400000) / 1000 / 86.4;
+      return beat;
+    }
+
     $(function() {
       $("#ti-top-text-slogen-typed").typed({
         strings: ["我們相信 ^400 <b>群眾</b> ^600 的力量。",
@@ -91,6 +113,10 @@
         showCursor: true,
         typeSpeed: 40,
       });
+
+      setInterval(function () {
+        $("#ti-time-var").text(getBeat().toFixed(2));
+      }, 864);
     });
   })();
 </script>
